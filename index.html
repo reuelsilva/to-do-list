@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    <main>
+        <form>
+            <h1>To Do List <span><i class="fa-solid fa-note-sticky"></i></span></h1>
+            <div>
+                <input type="text" name="todo" placeholder="Adicione uma tarefa...">
+                <button title="Adicionar tarefa"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </form>
+        
+        <section id="to-do-section">
+            <div id="to-do-list">
+                
+            </div>
+            <p class="empty-message">Nada aqui! <span>🗅</span></p>
+        </section>
+    </main>
+    <script src="src/js/script.js" defer></script>
+</body>
+</html>

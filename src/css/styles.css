@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600&display=swap');
+
+:root{
+    --color-01: #232730;
+    --color-02: #6E7B8D;
+    --color-03: #47BBFB;
+    --color-04: #3D4047;
+    --color-05: #286090;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--color-01);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    & main{
+        max-width: 500px;
+        width: 100%;
+        & form{
+            margin-bottom: 2rem;
+            & h1{
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 2rem;
+                color: #ffffff;
+                margin-bottom: 2rem;
+            }
+            & div{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                max-width: 380px;
+                margin: 0 auto;
+                & input{
+                    width: 100%;
+                    padding: 1rem;
+                    background: transparent;
+                    border: 2px solid var(--color-03);
+
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 500;
+                    font-style: normal;
+
+                    font-size: 1.2rem;
+                    color: var(--color-02);
+                }
+                & input::placeholder{
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 500;
+                    font-style: normal;
+
+                    font-size: 1.2rem;
+                    color: var(--color-02);
+                }
+                & input:focus{
+                    outline: none;
+                }
+                & button{
+                    cursor: pointer;
+                    width: 50px;
+                    height: 50px;
+                    flex-shrink: 0;
+                    border-radius: 50%;
+                    border: none;
+                    background-color: var(--color-03);
+                    & i{
+                        font-size: 2rem;
+                        color: var(--color-01);
+                    }
+                }
+            }
+        }
+
+        & section{
+            position: relative;
+            height: 280px;
+            overflow-y: auto;
+            &::-webkit-scrollbar{
+                width: 8px;
+            }
+            &::-webkit-scrollbar-track{
+                background: transparent;   
+            }
+            &::-webkit-scrollbar-thumb{
+                background-color: var(--color-04); 
+                border-radius: 20px;
+            }
+            & div#to-do-list{
+                padding: 1rem;
+                & div.to-do-item{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    padding: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    & p{
+                        width: 100%;
+                        font-family: "Poppins", sans-serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        color: #ffffff;
+                    }
+                    & button{
+                        cursor: pointer;
+                        height: 50px;
+                        width: 50px;
+                        flex-shrink: 0;
+                        border-radius: 50%;
+                        border: none;
+                        & i{
+                            font-size: 1rem;
+                            color: #ffffff;
+                        }
+                        & i:active{
+                            pointer-events: none;
+                        }
+                    }
+                    & button.check-to-do{
+                        background-color: var(--color-03);
+                    }
+                    & button.delete-to-do{
+                        background-color: #D9534F;
+                    }
+                }
+                & div.to-do-item.completed{
+                    background-color: var(--color-04);
+                    & p{
+                        font-family: "Poppins", sans-serif;
+                        font-weight: 500;
+                        font-style: italic;
+                        color: var(--color-02);
+                        text-decoration: line-through;
+                    }
+                }
+            }
+            & p.empty-message{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                font-size: 1.4rem;
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                color: var(--color-02);
+                & span{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.hide{
+    display: none;
+}
